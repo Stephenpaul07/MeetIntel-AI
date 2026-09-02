@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+
+/* ==============================
+   RESET & GLOBAL
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-dark: #080b14;
+    --text-primary: #f5f7ff;
+    --text-secondary: #a7adc4;
+
+    --glass-bg: rgba(255, 255, 255, 0.07);
+    --glass-border: rgba(255, 255, 255, 0.12);
+
+    --primary: #7c5cff;
+    --primary-light: #a18bff;
+
+    --success: #48e5a3;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+/* ==============================
+   BACKGROUND
+================================= */
+
+.background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    z-index: -1;
+
+    background:
+        radial-gradient(
+            circle at top left,
+            rgba(124, 92, 255, 0.16),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at bottom right,
+            rgba(44, 211, 225, 0.12),
+            transparent 40%
+        );
+}
+
+.orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.35;
+}
+
+.orb-one {
+    width: 350px;
+    height: 350px;
+    background: #7c5cff;
+    top: -100px;
+    left: -100px;
+}
+
+.orb-two {
+    width: 300px;
+    height: 300px;
+    background: #00d4ff;
+    bottom: -100px;
+    right: -80px;
+}
+
+.orb-three {
+    width: 220px;
+    height: 220px;
+    background: #9b59ff;
+    top: 40%;
+    left: 45%;
+}
+
+
+/* ==============================
+   LAYOUT
+================================= */
+
+.app-container {
+    width: min(1200px, 92%);
+    margin: auto;
+    padding: 24px 0 60px;
+}
+
+
+/* ==============================
+   GLASS COMPONENT
+================================= */
+
+.glass {
+    background: var(--glass-bg);
+
+    border: 1px solid var(--glass-border);
+
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.28);
+}
+
+
+/* ==============================
+   NAVBAR
+================================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 14px 20px;
+    border-radius: 18px;
+
+    margin-bottom: 40px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    color: var(--text-primary);
+
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.brand-icon {
+    width: 38px;
+    height: 38px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            #4c9fff
+        );
+
+    box-shadow:
+        0 6px 20px rgba(124, 92, 255, 0.4);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.ai-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    background: var(--success);
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 12px var(--success);
+}
+
+
+/* ==============================
+   COMMON UTILITIES
+================================= */
+
+.page-header {
+    margin-bottom: 28px;
+}
+
+.page-header h1 {
+    font-size: clamp(28px, 5vw, 42px);
+    margin-bottom: 8px;
+}
+
+.page-header p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}

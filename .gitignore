@@ -1,0 +1,34 @@
+# Virtual environment
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django
+*.log
+db.sqlite3
+/staticfiles/
+
+# Environment variables
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# NiceGUI
+.nicegui/
+
+# Model/cache files
+.cache/
+
+# Chroma vector database
+chroma_db/
